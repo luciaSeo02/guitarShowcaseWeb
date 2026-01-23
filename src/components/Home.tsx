@@ -19,7 +19,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="relative h-[240px] pb-0">
+          <div className="relative h-[24gi0px] pb-0">
             <img
               src="/images/guitar3.png"
               alt="Handcrafted guitar"
