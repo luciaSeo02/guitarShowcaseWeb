@@ -1,24 +1,48 @@
+import { useState } from "react";
+import { featuredWork } from "../data/featuredWork";
+import FeatureWorkModal from "./FeatureWorkModal";
+import type { FeaturedWorkItem } from "../data/featuredWork";
+
 export default function FeatureWork() {
+  const [selectedItem, setSelectedItem] = useState<FeaturedWorkItem | null>(
+    null,
+  );
+
   return (
-    <section className="py-16">
-      <h2 className="px-4 text-2xl font-serif mb-8">Feature Work</h2>
+    <section className="py-12">
+      <h2 className="px-4 text-2xl font-serif mb-6">Feature Work</h2>
 
       <div className="flex gap-6 overflow-x-auto px-4 scrollbar-hide">
-        {[
-          "Electric Guitar",
-          "Restoration",
-          "Metal Sculpture",
-          "Guitar Detail",
-        ].map((title) => (
-          <div
-            key={title}
-            className="min-w-65 bg-neutral-800 rounded-lg overflow-hidden"
+        {featuredWork.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => setSelectedItem(item)}
+            className="min-w-[260px] bg-neutral-800 rounded-lg overflow-hidden text-left"
           >
-            <div className="aspect-3/4 bg-neutral-700" />
-            <h3 className="p-4 text-sm tracking-wide">{title}</h3>
-          </div>
+            <div className="aspect-[3/4]">
+              <img
+                src={item.coverImage}
+                alt={item.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="p-4">
+              <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">
+                {item.category}
+              </p>
+              <h3 className="text-sm tracking-wide">{item.title}</h3>
+            </div>
+          </button>
         ))}
       </div>
+
+      {selectedItem && (
+        <FeatureWorkModal
+          item={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
+      )}
     </section>
   );
 }
