@@ -1,4 +1,5 @@
 import type { FeaturedWorkItem } from "../data/featuredWork";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   item: FeaturedWorkItem;
@@ -6,6 +7,7 @@ interface Props {
 }
 
 export default function FeatureWorkModal({ item, onClose }: Props) {
+  const navigate = useNavigate();
   return (
     <div className="fixed inset-0 z-50 bg-black/60 flex items-end">
       <button
@@ -43,7 +45,18 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
             </div>
           )}
 
-          <button className="w-full bg-amber-700 py-3 text-xs tracking-widest-uppercase">
+          <button
+            onClick={() => {
+              navigate("/custom-order", {
+                state: {
+                  service: "Custom Build",
+                  reference: item.title,
+                  description: item.description,
+                },
+              });
+            }}
+            className="w-full bg-amber-700 hover:bg-amber-600 transition py-3 text-xs tracking-widest uppercase"
+          >
             Request a custom one
           </button>
         </div>

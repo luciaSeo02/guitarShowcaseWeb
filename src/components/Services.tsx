@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -30,6 +31,8 @@ export default function Services() {
   const current = services.find((s) => s.id === activeService);
 
   const detailRef = useRef<HTMLDivElement | null>(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleCkickOutside(e: MouseEvent) {
@@ -72,7 +75,12 @@ export default function Services() {
         <div ref={detailRef} className="mt-6 px-4">
           <div className="bg-neutral-800/60 rounded-lg p-4 text-sm leading-relaxed">
             <p className="mb-4">{current.description}</p>
-            <button className="text-xs tracking-widest uppercase text-amber-500">
+            <button
+              onClick={() =>
+                navigate("/custom-order", { state: { service: current.title } })
+              }
+              className="text-xs tracking-widest uppercase text-amber-500"
+            >
               Request Service
             </button>
           </div>
