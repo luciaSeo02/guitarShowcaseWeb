@@ -56,8 +56,8 @@ export default function CustomOrderPage() {
   };
 
   return (
-    <section className="px-4 py-6 bg-neutral-900 min-h-screen">
-      <div className="max-w-3xl mx-auto">
+    <section className="px-4 md:px-8 lg:px-16 py-8 md:py-16 bg-neutral-900 min-h-screen">
+      <div className="max-w-2xl md:max-w-3xl mx-auto">
         {!isSuccess && (
           <button
             onClick={() => navigate(-1)}
@@ -70,7 +70,9 @@ export default function CustomOrderPage() {
 
         {!isSuccess ? (
           <>
-            <h1 className="text-3xl font-serif mb-4">Start a Custom Order</h1>
+            <h1 className="text-3xl md:text-4xl font-serif mb-6">
+              Start a Custom Order
+            </h1>
 
             {selectedService && (
               <div className="mb-6 bg-neutral-800 border border-neutral-700 p-4 rounded">
@@ -90,12 +92,12 @@ export default function CustomOrderPage() {
               </div>
             )}
 
-            <p className="text-neutral-400 mb-10">
+            <p className="text-neutral-400 mb-12 md:mb-14">
               Tell us about your idea and we’ll get back to you within 24–48
               hours.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
               <div>
                 <label className="block text-sm mb-2">Full Name</label>
                 <input
@@ -103,7 +105,7 @@ export default function CustomOrderPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 focus:outline-none focus:border-amber-600"
+                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
                   required
                 />
               </div>
@@ -115,7 +117,7 @@ export default function CustomOrderPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 focus:outline-none focus:border-amber-600"
+                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
                   required
                 />
               </div>
@@ -127,7 +129,7 @@ export default function CustomOrderPage() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 focus:outline-none focus:border-amber-600"
+                  className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
                   required
                 />
               </div>
@@ -135,7 +137,7 @@ export default function CustomOrderPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 tracking-widest text-sm transition ${
+                className={`w-full py-4 md:py-5 tracking-widest text-sm transition ${
                   isSubmitting
                     ? "bg-neutral-700 cursor-not-allowed"
                     : "bg-amber-700 hover:bg-amber-600"
@@ -146,7 +148,7 @@ export default function CustomOrderPage() {
             </form>
           </>
         ) : (
-          <div className="text-center py-20 animate-fade-in">
+          <div className="text-center py-20 md:py-32 animate-fade-in max-w-2xl mx-auto">
             <h2 className="text-2xl font-serif mb-4">
               Request Sent Successfully
             </h2>

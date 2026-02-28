@@ -50,9 +50,11 @@ export default function Services() {
   }, [activeService]);
 
   return (
-    <section className="py-8">
-      <h2 className="px-4 text-2xl font-serif mb-6">Services</h2>
-      <div className="flex justify-around px-4 text-center">
+    <section className="py-8 md:py-16">
+      <h2 className="px-4 md:px-0 text-2xl md:text-3xl font-serif mb-8 max-w-7xl mx-auto">
+        Services
+      </h2>
+      <div className="flex md:justify-center md:gap-20 justify-around px-4 md:px-0 text-center max-w-5xl mx-auto">
         {services.map((service) => (
           <button
             key={service.id}
@@ -61,7 +63,7 @@ export default function Services() {
             }
             className={`flex flex-col items-center gap-3 transition ${activeService === service.id ? "opacity-100" : "opacity-60"}`}
           >
-            <div className="h-14 w-14 rounded-full bg-neutral-800 flex items-center justify-center text-xl">
+            <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-neutral-800 flex items-center justify-center text-xl md:text-2xl transition">
               {service.icon}
             </div>
             <span className="text-xs tracking-widest uppercase">
@@ -72,8 +74,8 @@ export default function Services() {
       </div>
 
       {current && (
-        <div ref={detailRef} className="mt-6 px-4">
-          <div className="bg-neutral-800/60 rounded-lg p-4 text-sm leading-relaxed">
+        <div ref={detailRef} className="mt-8 px-4 md:px-0 max-w-3xl mx-auto">
+          <div className="bg-neutral-800/60 rounded-lg p-6 md:p-8 text-sm md:text-base leading-relaxed">
             <p className="mb-4">{current.description}</p>
             <button
               onClick={() =>

@@ -10,14 +10,16 @@ export default function FeatureWork() {
 
   return (
     <section className="py-12">
-      <h2 className="px-4 text-2xl font-serif mb-6">Feature Work</h2>
+      <h2 className="px-4 md:px-0 text-2xl md:text-3xl font-serif mb-6 max-w-7xl mx-auto">
+        Feature Work
+      </h2>
 
-      <div className="flex gap-6 overflow-x-auto px-4 scrollbar-hide">
+      <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible px-4 md:px-0 scrollbar-hide max-w-7xl mx-auto">
         {featuredWork.map((item) => (
           <button
             key={item.id}
             onClick={() => setSelectedItem(item)}
-            className="min-w-[260px] bg-neutral-800 rounded-lg overflow-hidden text-left"
+            className="min-w-[260px] md:min-w-0 bg-neutral-800 rounded-lg overflow-hidden text-left transition hover:scale-[1.02]"
           >
             <div className="aspect-[3/4]">
               <img

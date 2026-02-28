@@ -9,13 +9,13 @@ interface Props {
 export default function FeatureWorkModal({ item, onClose }: Props) {
   const navigate = useNavigate();
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 flex items-end">
+    <div className="fixed inset-0 z-50 bg-black/60 flex items-end md:items-center justify-center">
       <button
         className="absolute inset-0"
         onClick={onClose}
         aria-label="Close modal"
       />
-      <div className="relative w-full max-h-[90vh] bg-neutral-900 rounded-t-2xl overflow-y-auto">
+      <div className="relative w-full md:max-w-3xl max-h-[90vh] bg-neutral-900 rounded-t-2xl md:rounded-2xl overflow-y-auto">
         <div className="p-4 flex justify-between items-center">
           <h3 className="text-lg font-serif">{item.title}</h3>
           <button onClick={onClose} className="text-neutral-400 text-xl">

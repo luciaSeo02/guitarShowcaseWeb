@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 bg-neutral-900">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/custom-order" element={<CustomOrderPage />} />
