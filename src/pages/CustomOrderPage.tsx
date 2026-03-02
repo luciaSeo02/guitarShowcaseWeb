@@ -33,21 +33,22 @@ export default function CustomOrderPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
 
       setIsSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: referencePiece
-          ? `I would like a custom piece inspired by "${referencePiece}".\n\nDetails:\n${referenceDescription}\n\nMy idea:\n`
-          : "",
-        service: selectedService,
-      });
     } catch (error) {
       console.error("Submission error:", error);
     } finally {
@@ -99,10 +100,14 @@ export default function CustomOrderPage() {
 
             <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
               <div>
-                <label className="block text-sm mb-2">Full Name</label>
+                <label htmlFor="name" className="block text-sm mb-2">
+                  Full Name
+                </label>
                 <input
+                  id="name"
                   type="text"
                   name="name"
+                  autoComplete="name"
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
@@ -111,10 +116,14 @@ export default function CustomOrderPage() {
               </div>
 
               <div>
-                <label className="block text-sm mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm mb-2">
+                  Email
+                </label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
@@ -123,10 +132,14 @@ export default function CustomOrderPage() {
               </div>
 
               <div>
-                <label className="block text-sm mb-2">Describe your idea</label>
+                <label htmlFor="message" className="block text-sm mb-2">
+                  Describe your idea
+                </label>
                 <textarea
-                  rows={5}
+                  id="message"
                   name="message"
+                  autoComplete="off"
+                  rows={5}
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full bg-neutral-800 border border-neutral-700 px-4 py-3 md:py-4 focus:outline-none focus:border-amber-600 transition"
