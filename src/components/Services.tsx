@@ -1,27 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const services = [
   {
     id: "custom",
-    title: "Custom Builds",
     icon: "🎸",
-    description:
-      "Fully handcrafted guitars designed and built to match your sound and style.",
   },
   {
     id: "restoration",
-    title: "Restoration",
     icon: "🎻",
-    description:
-      "Careful restoration of vintage and damaged instruments, respecting their history.",
   },
   {
     id: "metal",
-    title: "Metal Figures",
     icon: "🔥",
-    description:
-      "Unique metal sculptures and decorative pieces forged by hand.",
   },
 ];
 
@@ -33,6 +25,8 @@ export default function Services() {
   const detailRef = useRef<HTMLDivElement | null>(null);
 
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     function handleCkickOutside(e: MouseEvent) {
@@ -52,7 +46,7 @@ export default function Services() {
   return (
     <section className="py-8 md:py-16">
       <h2 className="px-4 md:px-0 text-2xl md:text-3xl font-serif mb-8 max-w-7xl mx-auto">
-        Services
+        {t("services.title")}
       </h2>
       <div className="flex md:justify-center md:gap-20 justify-around px-4 md:px-0 text-center max-w-5xl mx-auto">
         {services.map((service) => (
@@ -67,7 +61,7 @@ export default function Services() {
               {service.icon}
             </div>
             <span className="text-xs tracking-widest uppercase">
-              {service.title}
+              {t(`services.${service.id}.title`)}
             </span>
           </button>
         ))}
@@ -76,14 +70,16 @@ export default function Services() {
       {current && (
         <div ref={detailRef} className="mt-8 px-4 md:px-0 max-w-3xl mx-auto">
           <div className="bg-neutral-800/60 rounded-lg p-6 md:p-8 text-sm md:text-base leading-relaxed">
-            <p className="mb-4">{current.description}</p>
+            <p className="mb-4">{t(`services.${current.id}.description`)}</p>
             <button
               onClick={() =>
-                navigate("/custom-order", { state: { service: current.title } })
+                navigate("/custom-order", {
+                  state: { service: t(`services.${current.id}.title`) },
+                })
               }
               className="text-xs tracking-widest uppercase text-amber-500"
             >
-              Request Service
+              {t("services.requestButton")}
             </button>
           </div>
         </div>

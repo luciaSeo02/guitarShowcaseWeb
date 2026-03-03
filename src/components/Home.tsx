@@ -3,8 +3,10 @@ import CraftProcess from "./CraftProcess";
 import CustomOrders from "./CustomOrders";
 import FeatureWork from "./FeatureWork";
 import Services from "./Services";
+import { useTranslation } from "react-i18next";
 export default function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -12,16 +14,16 @@ export default function Home() {
         <div className="grid grid-cols-[0.7fr_1.3fr] md:grid-cols-2 items-center max-w-7xl mx-auto">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-              Handcraft guitars
+              {t("hero.title_line1")}
               <br />
-              and metal pieces
+              {t("hero.title_line2")}
             </h1>
 
             <button
               onClick={() => navigate("/custom-order")}
               className="bg-amber-700 text-white px-3 py-3 text-xs tracking-widest uppercase"
             >
-              Start a Custom Build
+              {t("hero.button")}
             </button>
           </div>
 

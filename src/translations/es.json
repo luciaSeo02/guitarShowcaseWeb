@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title_line1": "Guitarras artesanales",
+    "title_line2": "y piezas de metal",
+    "button": "Empezar encargo personalizado"
+  },
+  "featureWork": {
+    "title": "Trabajos Destacados",
+    "requestButton": "Solicitar uno personalizado"
+  },
+  "featured": {
+    "electric": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra eléctrica artesanal con cuerpo de nogal y sonido de inspiración vintage."
+    },
+    "restoration": {
+      "title": "Restauración de Guitarra",
+      "category": "Restauración",
+      "description": "Restauración completa de guitarras clásicas preservando su carácter y sonido."
+    },
+    "metal": {
+      "title": "Escultura de Metal",
+      "category": "Arte en Metal",
+      "description": "Figuras de metal hechas a mano con materiales reciclados y forjados."
+    }
+  },
+  "services": {
+    "title": "Servicios",
+    "requestButton": "Solicitar servicio",
+
+    "custom": {
+      "title": "Encargos Personalizados",
+      "description": "Guitarras totalmente artesanales diseñadas y construidas para adaptarse a tu sonido y estilo."
+    },
+    "restoration": {
+      "title": "Restauración",
+      "description": "Restauración cuidadosa de instrumentos antiguos y dañados, respetando su historia."
+    },
+    "metal": {
+      "title": "Figuras de Metal",
+      "description": "Esculturas y piezas decorativas únicas forjadas a mano."
+    }
+  },
+  "craftProcess": {
+    "title": "Proceso de Creación",
+    "steps": {
+      "1": {
+        "label": "Idea",
+        "description": "Comenzamos entendiendo tu visión, referencias y el propósito de la pieza."
+      },
+      "2": {
+        "label": "Diseño",
+        "description": "Se definen materiales, medidas y detalles visuales antes de construir."
+      },
+      "3": {
+        "label": "Construcción",
+        "description": "Elaborado cuidadosamente a mano utilizando técnicas tradicionales y herramientas modernas."
+      },
+      "4": {
+        "label": "Entrega",
+        "description": "Ajustes finales, control de calidad y entrega segura del trabajo terminado."
+      }
+    }
+  },
+  "customOrder": {
+    "sectionTitle": "Pedidos Personalizados",
+    "sectionText": "Cada pieza se realiza por encargo. Cuéntanos tu idea.",
+    "sectionButton": "INICIAR PEDIDO PERSONALIZADO",
+
+    "pageTitle": "Iniciar Pedido Personalizado",
+    "selectedService": "Servicio Seleccionado",
+    "inspiredBy": "Inspirado en",
+    "descriptionText": "Cuéntanos tu idea y te responderemos en un plazo de 24–48 horas.",
+
+    "fullName": "Nombre completo",
+    "email": "Correo electrónico",
+    "describeIdea": "Describe tu idea",
+
+    "sending": "ENVIANDO...",
+    "submit": "ENVIAR SOLICITUD",
+
+    "successTitle": "Solicitud enviada con éxito",
+    "successText": "Gracias por tu pedido personalizado. Nos pondremos en contacto contigo en un plazo de 24–48 horas.",
+    "backHome": "VOLVER AL INICIO",
+    "back": "Volver",
+
+    "defaultMessage": "Me gustaría una pieza personalizada inspirada en \"{{reference}}\".\n\nDetalles:\n{{description}}\n\nMi idea:\n"
+  }
+}

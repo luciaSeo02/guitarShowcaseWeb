@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "title_line1": "Handcraft guitars",
+    "title_line2": "and metal pieces",
+    "button": "Start a Custom Build"
+  },
+
+  "featureWork": {
+    "title": "Feature Work",
+    "requestButton": "Request a custom one"
+  },
+
+  "featured": {
+    "electric": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Handcrafted electric guitar with walnut body and vintage-inspired sound."
+    },
+    "restoration": {
+      "title": "Guitar Restoration",
+      "category": "Restoration",
+      "description": "Full restoration of classic guitars, preserving character and sound."
+    },
+    "metal": {
+      "title": "Metal Sculpture",
+      "category": "Metal Art",
+      "description": "Handmade metal figures created from recycled and forged materials."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "requestButton": "Request Service",
+
+    "custom": {
+      "title": "Custom Builds",
+      "description": "Fully handcrafted guitars designed and built to match your sound and style."
+    },
+    "restoration": {
+      "title": "Restoration",
+      "description": "Careful restoration of vintage and damaged instruments, respecting their history."
+    },
+    "metal": {
+      "title": "Metal Figures",
+      "description": "Unique metal sculptures and decorative pieces forged by hand."
+    }
+  },
+  "craftProcess": {
+    "title": "Craft Process",
+    "steps": {
+      "1": {
+        "label": "Idea",
+        "description": "We start by understanding your vision, references and purpose of the piece."
+      },
+      "2": {
+        "label": "Design",
+        "description": "Materials, measurements and visual details are defined before building."
+      },
+      "3": {
+        "label": "Construction",
+        "description": "Carefully handcrafted using traditional techniques and modern tools."
+      },
+      "4": {
+        "label": "Delivery",
+        "description": "Final adjustments, quality check and safe delivery of the finished work."
+      }
+    }
+  },
+  "customOrder": {
+    "sectionTitle": "Custom Orders",
+    "sectionText": "Each piece is made to order. Tell us your idea.",
+    "sectionButton": "START A CUSTOM ORDER",
+
+    "pageTitle": "Start a Custom Order",
+    "selectedService": "Selected Service",
+    "inspiredBy": "Inspired By",
+    "descriptionText": "Tell us about your idea and we’ll get back to you within 24–48 hours.",
+
+    "fullName": "Full Name",
+    "email": "Email",
+    "describeIdea": "Describe your idea",
+
+    "sending": "SENDING...",
+    "submit": "SUBMIT REQUEST",
+
+    "successTitle": "Request Sent Successfully",
+    "successText": "Thank you for your custom order request. We will contact you within 24–48 hours.",
+    "backHome": "BACK TO HOME",
+    "back": "Back",
+
+    "defaultMessage": "I would like a custom piece inspired by \"{{reference}}\".\n\nDetails:\n{{description}}\n\nMy idea:\n"
+  }
+}

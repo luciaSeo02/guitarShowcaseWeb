@@ -1,5 +1,6 @@
 import type { FeaturedWorkItem } from "../data/featuredWork";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   item: FeaturedWorkItem;
@@ -8,6 +9,7 @@ interface Props {
 
 export default function FeatureWorkModal({ item, onClose }: Props) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   return (
     <div className="fixed inset-0 z-50 bg-black/60 flex items-end md:items-center justify-center">
       <button
@@ -17,7 +19,7 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
       />
       <div className="relative w-full md:max-w-3xl max-h-[90vh] bg-neutral-900 rounded-t-2xl md:rounded-2xl overflow-y-auto">
         <div className="p-4 flex justify-between items-center">
-          <h3 className="text-lg font-serif">{item.title}</h3>
+          <h3 className="text-lg font-serif">{t(item.titleKey)}</h3>
           <button onClick={onClose} className="text-neutral-400 text-xl">
             ✕
           </button>
@@ -25,13 +27,13 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
         <div className="aspect-[3/4]">
           <img
             src={item.images[0]}
-            alt={item.title}
+            alt={item.titleKey}
             className="h-full w-full object-cover"
           />
         </div>
 
         <div className="p-4 space-y-4">
-          <p className="text-sm text-neutral-300">{item.description}</p>
+          <p className="text-sm text-neutral-300">{t(item.descriptionKey)}</p>
           {item.images.length > 1 && (
             <div className="flex gap-4 overflow-x-auto">
               {item.images.slice(1).map((img, index) => (
@@ -50,14 +52,14 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
               navigate("/custom-order", {
                 state: {
                   service: "Custom Build",
-                  reference: item.title,
-                  description: item.description,
+                  reference: item.titleKey,
+                  description: item.descriptionKey,
                 },
               });
             }}
             className="w-full bg-amber-700 hover:bg-amber-600 transition py-3 text-xs tracking-widest uppercase"
           >
-            Request a custom one
+            {t("featureWork.requestButton")}
           </button>
         </div>
       </div>

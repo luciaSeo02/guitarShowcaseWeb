@@ -1,35 +1,18 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const steps = [
-  {
-    number: "1",
-    label: "Idea",
-    description:
-      "We start by understanding your vision, references and purpose of the piece.",
-  },
-  {
-    number: "2",
-    label: "Design",
-    description:
-      "Materials, measurements and visual details are defined before building.",
-  },
-  {
-    number: "3",
-    label: "Construction",
-    description:
-      "Carefully handcrafted using traditional techniques and modern tools.",
-  },
-  {
-    number: "4",
-    label: "Delivery",
-    description:
-      "Final adjustments, quality check and safe delivery of the finished work.",
-  },
+  { number: "1" },
+  { number: "2" },
+  { number: "3" },
+  { number: "4" },
 ];
 
 export default function CraftProcess() {
   const [activeStep, setActiveStep] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement | null>(null);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     function handleScroll() {
@@ -52,7 +35,7 @@ export default function CraftProcess() {
   return (
     <section ref={sectionRef} className="py-12 md:py-20">
       <h2 className="px-4 md:px-0 text-2xl md:text-3xl font-serif mb-12 max-w-7xl mx-auto">
-        Craft Process
+        {t("craftProcess.title")}
       </h2>
 
       <div className="relative px-4 md:px-0 max-w-6xl mx-auto">
@@ -76,7 +59,7 @@ export default function CraftProcess() {
                 {step.number}
               </div>
               <span className="text-xs tracking-widest uppercase opacity-80">
-                {step.label}
+                {t(`craftProcess.steps.${step.number}.label`)}
               </span>
             </div>
           ))}
@@ -88,7 +71,7 @@ export default function CraftProcess() {
               key={activeStep}
               className="text-sm md:text-base leading-relaxed opacity-90 animate-fadeIn"
             >
-              {current.description}
+              {t(`craftProcess.steps.${current.number}.description`)}
             </p>
           </div>
         )}
