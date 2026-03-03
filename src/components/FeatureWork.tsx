@@ -20,7 +20,7 @@ export default function FeatureWork() {
           <button
             key={item.id}
             onClick={() => setSelectedItem(item)}
-            className="min-w-[260px] md:min-w-0 bg-neutral-800 rounded-lg overflow-hidden text-left transition hover:scale-[1.02]"
+            className="min-w-[260px] md:min-w-0 bg-neutral-800 rounded-lg overflow-hidden text-left transition hover:scale-[1.02] cursor-pointer"
           >
             <div className="aspect-[3/4]">
               <img

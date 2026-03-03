@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex gap-4 text-xs tracking-widest uppercase">
           <button
             onClick={() => changeLanguage("en")}
-            className={`transition ${
+            className={`transition cursor-pointer ${
               currentLang === "en"
                 ? "text-amber-500"
                 : "text-neutral-500 hover:text-neutral-300"
@@ -29,7 +29,7 @@ export default function Header() {
 
           <button
             onClick={() => changeLanguage("es")}
-            className={`transition ${
+            className={`transition cursor-pointer ${
               currentLang === "es"
                 ? "text-amber-500"
                 : "text-neutral-500 hover:text-neutral-300"

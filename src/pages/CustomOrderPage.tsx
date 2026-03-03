@@ -68,7 +68,7 @@ export default function CustomOrderPage() {
         {!isSuccess && (
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-neutral-400 mb-8"
+            className="flex items-center gap-2 text-neutral-400 mb-8 cursor-pointer"
           >
             <ArrowLeft size={18} />
             {t("customOrder.back")}
@@ -100,7 +100,7 @@ export default function CustomOrderPage() {
             )}
 
             <p className="text-neutral-400 mb-12 md:mb-14">
-              <p>{t("customOrder.descriptionText")}</p>
+              {t("customOrder.descriptionText")}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
@@ -155,7 +155,7 @@ export default function CustomOrderPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 md:py-5 tracking-widest text-sm transition ${
+                className={`w-full py-4 md:py-5 tracking-widest text-sm transition cursor-pointer ${
                   isSubmitting
                     ? "bg-neutral-700 cursor-not-allowed"
                     : "bg-amber-700 hover:bg-amber-600"
@@ -178,7 +178,7 @@ export default function CustomOrderPage() {
 
             <button
               onClick={() => navigate("/")}
-              className="px-8 py-4 bg-amber-700 hover:bg-amber-600 transition text-sm tracking-widest"
+              className="px-8 py-4 bg-amber-700 hover:bg-amber-600 transition text-sm tracking-widest cursor-pointer"
             >
               {t("customOrder.backHome")}
             </button>

@@ -61,7 +61,7 @@ export default function Services() {
                   activeService === service.id ? null : service.id,
                 )
               }
-              className={`flex flex-col items-center gap-3 transition ${
+              className={`flex flex-col items-center gap-3 transition cursor-pointer ${
                 activeService === service.id ? "opacity-100" : "opacity-60"
               }`}
             >
@@ -87,7 +87,7 @@ export default function Services() {
                   state: { service: t(`services.${current.id}.title`) },
                 })
               }
-              className="text-xs tracking-widest uppercase text-amber-500"
+              className="text-xs tracking-widest uppercase text-amber-500 cursor-pointer"
             >
               {t("services.requestButton")}
             </button>

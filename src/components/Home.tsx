@@ -21,7 +21,7 @@ export default function Home() {
 
             <button
               onClick={() => navigate("/custom-order")}
-              className="bg-amber-700 text-white px-3 py-3 text-xs tracking-widest uppercase"
+              className="bg-amber-700 text-white px-3 py-3 text-xs tracking-widest uppercase cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
               {t("hero.button")}
             </button>

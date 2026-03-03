@@ -20,7 +20,10 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
       <div className="relative w-full md:max-w-3xl max-h-[90vh] bg-neutral-900 rounded-t-2xl md:rounded-2xl overflow-y-auto">
         <div className="p-4 flex justify-between items-center">
           <h3 className="text-lg font-serif">{t(item.titleKey)}</h3>
-          <button onClick={onClose} className="text-neutral-400 text-xl">
+          <button
+            onClick={onClose}
+            className="text-neutral-400 text-xl cursor-pointer"
+          >
             ✕
           </button>
         </div>
@@ -57,7 +60,7 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
                 },
               });
             }}
-            className="w-full bg-amber-700 hover:bg-amber-600 transition py-3 text-xs tracking-widest uppercase"
+            className="w-full bg-amber-700 hover:bg-amber-600 transition py-3 text-xs tracking-widest uppercase cursor-pointer"
           >
             {t("featureWork.requestButton")}
           </button>
