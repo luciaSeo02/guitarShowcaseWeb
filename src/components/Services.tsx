@@ -1,19 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Guitar, Wrench, Flame } from "lucide-react";
 
 const services = [
   {
     id: "custom",
-    icon: "🎸",
+    icon: Guitar,
   },
   {
     id: "restoration",
-    icon: "🎻",
+    icon: Wrench,
   },
   {
     id: "metal",
-    icon: "🔥",
+    icon: Flame,
   },
 ];
 
@@ -49,22 +50,31 @@ export default function Services() {
         {t("services.title")}
       </h2>
       <div className="flex md:justify-center md:gap-20 justify-around px-4 md:px-0 text-center max-w-5xl mx-auto">
-        {services.map((service) => (
-          <button
-            key={service.id}
-            onClick={() =>
-              setActiveService(activeService === service.id ? null : service.id)
-            }
-            className={`flex flex-col items-center gap-3 transition ${activeService === service.id ? "opacity-100" : "opacity-60"}`}
-          >
-            <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-neutral-800 flex items-center justify-center text-xl md:text-2xl transition">
-              {service.icon}
-            </div>
-            <span className="text-xs tracking-widest uppercase">
-              {t(`services.${service.id}.title`)}
-            </span>
-          </button>
-        ))}
+        {services.map((service) => {
+          const Icon = service.icon;
+
+          return (
+            <button
+              key={service.id}
+              onClick={() =>
+                setActiveService(
+                  activeService === service.id ? null : service.id,
+                )
+              }
+              className={`flex flex-col items-center gap-3 transition ${
+                activeService === service.id ? "opacity-100" : "opacity-60"
+              }`}
+            >
+              <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-neutral-800 flex items-center justify-center transition">
+                <Icon className="w-6 h-6 text-amber-500" />
+              </div>
+
+              <span className="text-xs tracking-widest uppercase">
+                {t(`services.${service.id}.title`)}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {current && (
