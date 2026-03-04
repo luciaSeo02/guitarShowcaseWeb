@@ -55,8 +55,8 @@ export default function FeatureWorkModal({ item, onClose }: Props) {
               navigate("/custom-order", {
                 state: {
                   service: "Custom Build",
-                  reference: item.titleKey,
-                  description: item.descriptionKey,
+                  reference: t(item.titleKey),
+                  description: t(item.descriptionKey),
                 },
               });
             }}
