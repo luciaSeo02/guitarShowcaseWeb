@@ -21,6 +21,71 @@
       "category": "Restoration",
       "description": "Full restoration of classic guitars, preserving character and sound."
     },
+    "electric02": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Handcrafted Les Paul-style guitar with sapele wood and spruce top."
+    },
+    "electric03": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Restoration of a 335-style electric guitar."
+    },
+    "electric04": {
+      "title": "Acoustic Guitar",
+      "category": "Custom Build",
+      "description": "Handcrafted acoustic guitar with oak wood and spruce top."
+    },
+    "electric05": {
+      "title": "Resonator Guitar",
+      "category": "Custom Build",
+      "description": "Dobro-style resonator guitar with stainless steel body construction."
+    },
+    "electric06": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Handcrafted guitar made of oak wood in Telecaster style."
+    },
+    "electric07": {
+      "title": "Electric Guitar",
+      "category": "Restoration",
+      "description": "69 vintage-style Stratocaster guitar assembly in Dafne Blue with maple neck."
+    },
+    "electric08": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Stratocaster guitar assembly with a modern style, sunburst color, and black aesthetics. Rosewood fingerboard neck."
+    },
+    "electric09": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "57 vintage-style Stratocaster guitar assembly with sunburst finish and maple neck."
+    },
+    "electric10": {
+      "title": "Electric Guitar",
+      "category": "Restoration",
+      "description": "Stratocaster guitar assembly with a mid-60s vintage style in Shoreline Gold color and rosewood fingerboard neck."
+    },
+    "electric11": {
+      "title": "Electric Guitar",
+      "category": "Restoration",
+      "description": "Stratocaster guitar assembly with a vintage 61 style in Olympic White color and rosewood fingerboard neck."
+    },
+    "electric12": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Stratocaster-style guitar assembly with an aesthetic inspired by Mark Knopfler's red Stratocaster."
+    },
+    "electric13": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Stratocaster-style guitar setup with an aesthetic inspired by David Gilmour's famous black strat."
+    },
+    "electric14": {
+      "title": "Electric Guitar",
+      "category": "Custom Build",
+      "description": "Handcrafted electric guitar aesthetically inspired by Mark Knopfler's famous MK1 Pensa/Suhr."
+    },
     "metal": {
       "title": "Metal Sculpture",
       "category": "Metal Art",

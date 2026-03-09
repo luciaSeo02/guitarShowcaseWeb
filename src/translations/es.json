@@ -19,6 +19,71 @@
       "category": "Restauración",
       "description": "Restauración completa de guitarras clásicas preservando su carácter y sonido."
     },
+    "electric02": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra de fabricación artesanal al estilo Les Paul conmadera de sapelly y tapa de abeto."
+    },
+    "electric03": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Restauración de una guitarra eléctrica tipo 335."
+    },
+    "electric04": {
+      "title": "Guitarra Acústica",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra acústica de fabricación artesanal con madera de roble y tapa de abeto."
+    },
+    "electric05": {
+      "title": "Guitarra Resonadora",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra resonadora tipo dobro con fabricación del cuerpo en acero inoxidable."
+    },
+    "electric06": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra de fabricación artesanal con madera de roble y estilo telecaster."
+    },
+    "electric07": {
+      "title": "Guitarra Eléctrica",
+      "category": "Restauración",
+      "description": "Montaje de guitarra Stratocaster con estilo vintage del año 69 en color Dafne Blue y mástil de arce."
+    },
+    "electric08": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Montaje de guitarra Stratocaster con un estilo moderno, color sunburst y estética en color negro. Mástil con diapasón de rosewood."
+    },
+    "electric09": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Montaje de guitarra Stratocaster con un estilo vintage del año 57 en acabado sunburst y mastil de arce."
+    },
+    "electric10": {
+      "title": "Guitarra Eléctrica",
+      "category": "Restauración",
+      "description": "Montaje de guitarra Stratocaster con un estilo vintage de mediados de los 60 en color Shoreline Gold y mástil con diapasón de rosewood."
+    },
+    "electric11": {
+      "title": "Guitarra Eléctrica",
+      "category": "Restauración",
+      "description": "Montaje de guitarra Stratocaster con un estilo vintage año 61 en color Olimpic White y mástil con diapasón de rosewood."
+    },
+    "electric12": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Montaje de guitarra estilo Stratocaster con un montaje inspirado estéticamente en la  stratocaster roja de Mark Knopfler."
+    },
+    "electric13": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Montaje de guitarra estilo Stratocaster con un montaje inspirado estéticamente en la famosa black strat de David Gilmour."
+    },
+    "electric14": {
+      "title": "Guitarra Eléctrica",
+      "category": "Encargo Personalizado",
+      "description": "Guitarra eléctrica de fabricación artesanal inspirado estéticamente en la famosa MK1 Pensa/Suhr de Mark Knopfler."
+    },
     "metal": {
       "title": "Escultura de Metal",
       "category": "Arte en Metal",
