@@ -9,11 +9,6 @@
     "requestButton": "Solicitar uno personalizado"
   },
   "featured": {
-    "electric": {
-      "title": "Guitarra Eléctrica",
-      "category": "Encargo Personalizado",
-      "description": "Guitarra eléctrica hecha a mano con un acabado negro clásico, mástil de arce y un tono de bobina simple de inspiración vintage."
-    },
     "restoration": {
       "title": "Restauración de Guitarra",
       "category": "Restauración",

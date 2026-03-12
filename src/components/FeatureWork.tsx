@@ -30,14 +30,14 @@ export default function FeatureWork() {
       <div className="relative max-w-7xl mx-auto">
         <button
           onClick={scrollLeft}
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-neutral-800/80 hover:bg-neutral-700 p-3 rounded-full backdrop-blur cursor-pointer"
+          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-neutral-800/80 hover:bg-neutral-700 p-3 rounded-full backdrop-blur cursor-pointer transition-transform duration-300 hover:scale-110"
         >
           <ChevronLeft size={20} />
         </button>
 
         <button
           onClick={scrollRight}
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-neutral-800/80 hover:bg-neutral-700 p-3 rounded-full backdrop-blur cursor-pointer"
+          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-neutral-800/80 hover:bg-neutral-700 p-3 rounded-full backdrop-blur cursor-pointer transition-transform duration-300 hover:scale-110"
         >
           <ChevronRight size={20} />
         </button>

@@ -155,10 +155,10 @@ export default function CustomOrderPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 md:py-5 tracking-widest text-sm transition cursor-pointer ${
+                className={`w-full py-4 md:py-5 tracking-widest text-sm transition-all duration-300 cursor-pointer rounded-md ${
                   isSubmitting
-                    ? "bg-neutral-700 cursor-not-allowed"
-                    : "bg-amber-700 hover:bg-amber-600"
+                    ? "bg-neutral-700 cursor-not-allowed animate-pulse"
+                    : "bg-amber-700 hover:bg-amber-600 shadow-md hover:shadow-lg"
                 }`}
               >
                 {isSubmitting

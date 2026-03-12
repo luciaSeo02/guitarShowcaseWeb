@@ -9,28 +9,28 @@ export interface FeaturedWorkItem {
 
 export const featuredWork: FeaturedWorkItem[] = [
   {
-    id: "electric-guitar",
-    titleKey: "featured.electric.title",
-    categoryKey: "featured.electric.category",
-    descriptionKey: "featured.electric.description",
-    coverImage: "/images/electric-guitar.png",
-    images: ["/images/electric-guitar.png"],
-  },
-  {
-    id: "restoration",
-    titleKey: "featured.restoration.title",
-    categoryKey: "featured.restoration.category",
-    descriptionKey: "featured.restoration.description",
-    coverImage: "/images/restauration-guitar.png",
-    images: ["/images/restauration-guitar.png"],
-  },
-  {
     id: "electric02",
     titleKey: "featured.electric02.title",
     categoryKey: "featured.electric02.category",
     descriptionKey: "featured.electric02.description",
     coverImage: "/images/guitarEdits01.png",
     images: ["/images/guitarEdits01.png"],
+  },
+  {
+    id: "electric14",
+    titleKey: "featured.electric14.title",
+    categoryKey: "featured.electric14.category",
+    descriptionKey: "featured.electric14.description",
+    coverImage: "/images/guitarEdits13.png",
+    images: ["/images/guitarEdits13.png"],
+  },
+  {
+    id: "electric05",
+    titleKey: "featured.electric05.title",
+    categoryKey: "featured.electric05.category",
+    descriptionKey: "featured.electric05.description",
+    coverImage: "/images/guitarEdits04.png",
+    images: ["/images/guitarEdits04.png"],
   },
   {
     id: "electric03",
@@ -49,13 +49,14 @@ export const featuredWork: FeaturedWorkItem[] = [
     images: ["/images/guitarEdits03.png"],
   },
   {
-    id: "electric05",
-    titleKey: "featured.electric05.title",
-    categoryKey: "featured.electric05.category",
-    descriptionKey: "featured.electric05.description",
-    coverImage: "/images/guitarEdits04.png",
-    images: ["/images/guitarEdits04.png"],
+    id: "restoration",
+    titleKey: "featured.restoration.title",
+    categoryKey: "featured.restoration.category",
+    descriptionKey: "featured.restoration.description",
+    coverImage: "/images/restauration-guitar.png",
+    images: ["/images/restauration-guitar.png"],
   },
+
   {
     id: "electric06",
     titleKey: "featured.electric06.title",
@@ -120,14 +121,7 @@ export const featuredWork: FeaturedWorkItem[] = [
     coverImage: "/images/guitarEdits12.png",
     images: ["/images/guitarEdits12.png"],
   },
-  {
-    id: "electric14",
-    titleKey: "featured.electric14.title",
-    categoryKey: "featured.electric14.category",
-    descriptionKey: "featured.electric14.description",
-    coverImage: "/images/guitarEdits13.png",
-    images: ["/images/guitarEdits13.png"],
-  },
+
   {
     id: "metal-sculpture",
     titleKey: "featured.metal.title",

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Guitar, Wrench, Flame } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
@@ -61,15 +62,15 @@ export default function Services() {
                   activeService === service.id ? null : service.id,
                 )
               }
-              className={`flex flex-col items-center gap-3 transition cursor-pointer ${
+              className={`flex flex-col items-center gap-3 transition cursor-pointer group ${
                 activeService === service.id ? "opacity-100" : "opacity-60"
               }`}
             >
-              <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-neutral-800 flex items-center justify-center transition">
-                <Icon className="w-6 h-6 text-amber-500" />
+              <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-neutral-800 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                <Icon className="w-6 h-6 text-amber-500 transition-colors duration-300 group-hover:text-amber-400" />
               </div>
 
-              <span className="text-xs tracking-widest uppercase">
+              <span className="text-xs tracking-widest uppercase transition-colors duration-300 group-hover:text-amber-400">
                 {t(`services.${service.id}.title`)}
               </span>
             </button>
@@ -77,23 +78,32 @@ export default function Services() {
         })}
       </div>
 
-      {current && (
-        <div ref={detailRef} className="mt-8 px-4 md:px-0 max-w-3xl mx-auto">
-          <div className="bg-neutral-800/60 rounded-lg p-6 md:p-8 text-sm md:text-base leading-relaxed">
-            <p className="mb-4">{t(`services.${current.id}.description`)}</p>
-            <button
-              onClick={() =>
-                navigate("/custom-order", {
-                  state: { service: t(`services.${current.id}.title`) },
-                })
-              }
-              className="text-xs tracking-widest uppercase text-amber-500 cursor-pointer"
-            >
-              {t("services.requestButton")}
-            </button>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {current && (
+          <motion.div
+            ref={detailRef}
+            className="mt-8 px-4 md:px-0 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="bg-neutral-800/60 rounded-lg p-6 md:p-8 text-sm md:text-base leading-relaxed">
+              <p className="mb-4">{t(`services.${current.id}.description`)}</p>
+              <button
+                onClick={() =>
+                  navigate("/custom-order", {
+                    state: { service: t(`services.${current.id}.title`) },
+                  })
+                }
+                className="text-xs tracking-widest uppercase text-amber-500 cursor-pointer hover:text-amber-400 transition-colors duration-300"
+              >
+                {t("services.requestButton")}
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

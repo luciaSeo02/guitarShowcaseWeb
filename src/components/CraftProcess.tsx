@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const steps = [
   { number: "1" },
@@ -39,41 +40,58 @@ export default function CraftProcess() {
       </h2>
 
       <div className="relative px-4 md:px-0 max-w-6xl mx-auto">
-        <div className="absolute top-7 left-4 right-4 md:left-0 md:right-0 h-px bg-neutral-700" />
+        <div className="absolute top-7 left-4 right-4 md:left-0 md:right-0 h-px bg-neutral-700">
+          <motion.div
+            className="h-px bg-amber-700 origin-left"
+            initial={{ scaleX: 0 }}
+            animate={{
+              scaleX: activeStep ? Number(activeStep) / steps.length : 0,
+            }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
 
         <div className="flex justify-between md:justify-center md:gap-24 text-center">
           {steps.map((step) => (
-            <div
+            <motion.div
               key={step.number}
               onClick={() => setActiveStep(step.number)}
               className="flex flex-col items-center gap-3 w-full cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: Number(step.number) * 0.1 }}
             >
               <div
-                className={`relative z-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center font-semibold transition
-                  ${
-                    activeStep === step.number
-                      ? "bg-amber-700 text-white scale-110 shadow-lg shadow-amber-700/30"
-                      : "bg-neutral-800 text-neutral-400"
-                  }`}
+                className={`relative z-10 h-14 w-14 md:h-16 md:w-16 rounded-full flex items-center justify-center font-semibold transition-all duration-300
+        ${
+          activeStep === step.number
+            ? "bg-amber-700 text-white scale-110 shadow-lg shadow-amber-700/30"
+            : "bg-neutral-800 text-neutral-400 hover:scale-105 hover:bg-neutral-700"
+        }`}
               >
                 {step.number}
               </div>
-              <span className="text-xs tracking-widest uppercase opacity-80">
+              <span className="text-xs tracking-widest uppercase opacity-80 transition-colors duration-300 group-hover:text-amber-400">
                 {t(`craftProcess.steps.${step.number}.label`)}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {current && (
-          <div className="mt-10 px-6 md:px-0 text-center max-w-3xl mx-auto">
-            <p
-              key={activeStep}
-              className="text-sm md:text-base leading-relaxed opacity-90 animate-fadeIn"
-            >
+          <motion.div
+            key={activeStep}
+            className="mt-10 px-6 md:px-0 text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.4 }}
+          >
+            <p className="text-sm md:text-base leading-relaxed opacity-90">
               {t(`craftProcess.steps.${current.number}.description`)}
             </p>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>
