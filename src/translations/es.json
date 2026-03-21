@@ -79,10 +79,20 @@
       "category": "Encargo Personalizado",
       "description": "Guitarra eléctrica de fabricación artesanal inspirado estéticamente en la famosa MK1 Pensa/Suhr de Mark Knopfler."
     },
+    "electric15": {
+      "title": "Guitarra Eléctrica",
+      "category": "Restauración",
+      "description": "Montaje de stratocaster totalmente blanca con mastil de arce y un humbucker en el puente."
+    },
     "metal": {
       "title": "Escultura de Metal",
       "category": "Arte en Metal",
-      "description": "Figuras de metal hechas a mano con materiales reciclados y forjados."
+      "description": "Coche Fórmula 1 de construcción artesanal en acero inoxidable."
+    },
+    "metal02": {
+      "title": "Escultura de Metal",
+      "category": "Arte en Metal",
+      "description": "Coche clásico de construcción artesanal en acero inoxidable."
     }
   },
   "services": {

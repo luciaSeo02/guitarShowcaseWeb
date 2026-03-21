@@ -81,10 +81,20 @@
       "category": "Custom Build",
       "description": "Handcrafted electric guitar aesthetically inspired by Mark Knopfler's famous MK1 Pensa/Suhr."
     },
+    "electric15": {
+      "title": "Electric Guitar",
+      "category": "Restoration",
+      "description": "An all-white Stratocaster with a maple neck and a humbucker at the bridge."
+    },
     "metal": {
       "title": "Metal Sculpture",
       "category": "Metal Art",
-      "description": "Handmade metal figures created from recycled and forged materials."
+      "description": "Handcrafted Formula 1 car made of stainless steel."
+    },
+    "metal02": {
+      "title": "Metal Sculpture",
+      "category": "Metal Art",
+      "description": "Handcrafted classic car made of stainless steel."
     }
   },
   "services": {

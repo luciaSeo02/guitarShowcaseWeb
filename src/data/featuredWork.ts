@@ -17,12 +17,32 @@ export const featuredWork: FeaturedWorkItem[] = [
     images: ["/images/guitarEdits01.png"],
   },
   {
-    id: "electric14",
-    titleKey: "featured.electric14.title",
-    categoryKey: "featured.electric14.category",
-    descriptionKey: "featured.electric14.description",
-    coverImage: "/images/guitarEdits13.png",
-    images: ["/images/guitarEdits13.png"],
+    id: "electric15",
+    titleKey: "featured.electric15.title",
+    categoryKey: "featured.electric15.category",
+    descriptionKey: "featured.electric15.description",
+    coverImage: "/images/guitarEdits14.png",
+    images: ["/images/guitarEdits14.png"],
+  },
+  {
+    id: "metal-sculpture",
+    titleKey: "featured.metal.title",
+    categoryKey: "featured.metal.category",
+    descriptionKey: "featured.metal.description",
+    coverImage: "/images/metal-figure01.png",
+    images: [
+      "/images/metal-figure01.png",
+      "/images/metal-figure02.png",
+      "/images/metal-figure03.png",
+    ],
+  },
+  {
+    id: "metal-sculpture02",
+    titleKey: "featured.metal02.title",
+    categoryKey: "featured.metal02.category",
+    descriptionKey: "featured.metal02.description",
+    coverImage: "/images/metal-figure05.png",
+    images: ["/images/metal-figure05.png", "/images/metal-figure04.png"],
   },
   {
     id: "electric05",
@@ -31,6 +51,15 @@ export const featuredWork: FeaturedWorkItem[] = [
     descriptionKey: "featured.electric05.description",
     coverImage: "/images/guitarEdits04.png",
     images: ["/images/guitarEdits04.png"],
+  },
+
+  {
+    id: "electric14",
+    titleKey: "featured.electric14.title",
+    categoryKey: "featured.electric14.category",
+    descriptionKey: "featured.electric14.description",
+    coverImage: "/images/guitarEdits13.png",
+    images: ["/images/guitarEdits13.png"],
   },
   {
     id: "electric03",
@@ -120,14 +149,5 @@ export const featuredWork: FeaturedWorkItem[] = [
     descriptionKey: "featured.electric13.description",
     coverImage: "/images/guitarEdits12.png",
     images: ["/images/guitarEdits12.png"],
-  },
-
-  {
-    id: "metal-sculpture",
-    titleKey: "featured.metal.title",
-    categoryKey: "featured.metal.category",
-    descriptionKey: "featured.metal.description",
-    coverImage: "/images/metal-figure.png",
-    images: ["/images/metal-figure.png"],
   },
 ];
